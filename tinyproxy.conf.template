@@ -1,0 +1,18 @@
+User nobody
+Group nogroup
+
+Port ${PORT}
+Listen 0.0.0.0
+Timeout 600
+
+DefaultErrorFile "/usr/share/tinyproxy/default.html"
+StatFile "/usr/share/tinyproxy/stats.html"
+LogLevel Info
+
+BasicAuth ${PROXY_USER} ${PROXY_PASSWORD}
+BasicAuthRealm "Render Proxy"
+
+Allow 0.0.0.0/0
+
+ConnectPort 443
+ConnectPort 563
