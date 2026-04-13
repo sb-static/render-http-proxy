@@ -10,7 +10,6 @@ StatFile "/usr/share/tinyproxy/stats.html"
 LogLevel Info
 
 BasicAuth ${PROXY_USER} ${PROXY_PASSWORD}
-BasicAuthRealm "Render Proxy"
 
 Allow 0.0.0.0/0
 
